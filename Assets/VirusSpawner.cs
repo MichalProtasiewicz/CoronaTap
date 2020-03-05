@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class VirusSpawner : MonoBehaviour
 {
@@ -9,14 +7,12 @@ public class VirusSpawner : MonoBehaviour
     public GameObject virus;
     public float height;
 
-    // Start is called before the first frame update
     void Start()
     {
         GameObject newVirus = Instantiate(virus);
         newVirus.transform.position = transform.position + new Vector3(0, Random.Range(-height, height), 0);
     }
 
-    // Update is called once per frame
     void Update()
     {
        if(timer > maxTime)
